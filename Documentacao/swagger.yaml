@@ -1,0 +1,90 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: "APIRESTful"
+  description:  "APIRESTful Realiza a soma e média aritmética de um vetor de inteiros."
+
+schemes:
+  - http
+host: localhost:3000
+paths:
+  /numbers/sum:
+    get:
+      tags:
+      - Soma de um vetor de inteiros.
+      summary: SumArray
+      description: Soma um vetor de inteiros.
+      parameters:
+       - name: Vetor
+         in: body
+         description: Um vetor de inteiros
+         required: true
+         type: array
+         example: {"array" :[1, 2, 5]}
+      responses:
+        200:
+          description: Um inteiro sendo a soma dos valores do vetor
+          schema:
+            type: integer
+            example : 6
+  /numbers/average:
+    get:
+      tags:
+      - Média aritmética de um vetor de inteiros.
+      summary: AverageArray
+      description: Calcula a média aritmética de um vetor de inteiros.
+      parameters:
+       - name: Vetor
+         in: body
+         description: Um vetor de inteiros
+         required: true
+         type: array
+         example: {"array" :[1, 2, 5]}
+      responses:
+        200:
+          description: Um inteiro sendo a média aritmética do vetor de inteiros.
+          schema:
+            type: integer
+            example : 2       
+  /number/sum/:a/:b:
+    get:
+      tags:
+      - Calcula a soma de dois inteiros.
+      summary: SumInteger
+      description: Realiza a soma de dois inteiros.
+      parameters:
+       - name: A
+         in: query
+         description: Um numero inteiro.
+         type: integer
+       - name: B
+         in: query
+         description: Um numero inteiro.
+         type: integer
+      responses:
+        200:
+          description: Um inteiro sendo a soma de A + B.
+  /number/divide/:A/:B:
+    get:
+      tags:
+      - Calcula a divisão de dois inteiros.
+      summary: DivInteger
+      description: Realiza a divisão de dois inteiros.
+      parameters:
+       - name: A
+         in: query
+         description: Um numero inteiro.
+         type: integer
+       - name: B
+         in: query
+         description: Um numero inteiro.
+         type: integer
+      responses:
+        200:
+          description: Um inteiro sendo a divisão de A / B.        
+        
+          
+                         
+              
+                
