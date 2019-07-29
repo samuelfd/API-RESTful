@@ -22,5 +22,9 @@ API REST responsável por somar e calcular a média aritmética de um vetor de i
 ```  
 
 	
-8. Para realizar a média aritmética realize o mesmo proedimento do item 7, utilizando a seguinte url :
+8. Para realizar a média aritmética realize o mesmo procedimento do item 7, utilizando a seguinte url :
 >localhost:3000/numbers/average
+
+#Documentação
+
+1. A documentação da APIREST foi feita utilizando o framework Swagger, existe dois arquivos na pasta Documentacao, em ambos estão descrito a documentação da APIREST, para visualizar a documentação você deve acessar o [Swagger Hub] (https://app.swaggerhub.com) e fazer o Upload de qualquer um dos dois arquivos.
