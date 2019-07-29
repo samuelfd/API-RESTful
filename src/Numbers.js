@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 module.exports = class Numbers{
 
-     async sum (array){         
+     async sum (array){                 
         let sum = 0
         for (let i =0; i < array.length; i++ ){
             let value_index = array[i]        

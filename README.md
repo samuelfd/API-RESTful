@@ -13,7 +13,7 @@ API REST responsável por somar e calcular a média aritmética de um vetor de i
 5. Execute a APIREST utilizando o node :
 > node src/index.js
 6. Abra o Postman 
-7. Para realizar a soma do vetor de inteiros, acesse a seguinte url passando o array em formato JSON no corpo da requisição, utilizando o metodo GET :
+7. Para realizar a soma do vetor de inteiros, acesse a seguinte url passando o array em formato JSON no corpo da requisição, utilizando o metodo POST :
 >localhost:3000/numbers/sum
 ```JSON 
 { 
@@ -25,6 +25,24 @@ API REST responsável por somar e calcular a média aritmética de um vetor de i
 8. Para realizar a média aritmética realize o mesmo procedimento do item 7, utilizando a seguinte url :
 >localhost:3000/numbers/average
 
+9. Em ambas as requisições a resposta deve ser um JSON como demostrado abaixo: 
+
+```JSON 
+{
+    "success": true,
+    "average": 5
+}
+```  
+
 # Documentação
 
-1. A documentação da APIREST foi feita utilizando o framework Swagger, existe dois arquivos na pasta Documentacao, em ambos estão descrito a documentação da APIREST, para visualizar a documentação você deve acessar o [Swagger Hub] (https://app.swaggerhub.com) e fazer o Upload de qualquer um dos dois arquivos.
+1. A documentação da APIREST foi feita utilizando o framework Swagger, existe dois arquivos na pasta Documentacao, em ambos estão descrito a documentação da APIREST, para visualizar a documentação você deve acessar o [Swagger] (https://editor.swagger.io) e importar qualquer um dos dois arquivos a parti no menu "File".
+
+#Teste Unitário
+
+1. Para executar os testes unitários basta executar o seguinte código :
+> npm test
+
+2. Para visualizar o codigo fonte dos teste basta acessar os seguintes arquivos :
+>/spec/Number.spec.js "Teste unitário da classe Number"
+>/sepc/Numbers.spec.js "Teste unitário da classe NUmbers"

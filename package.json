@@ -1,0 +1,20 @@
+{
+  "name": "apirestful",
+  "version": "1.0.0",
+  "description": "Api responsavel por calcular a soma e a média aritmética de um vetor de inteiros",
+  "main": "index.js",
+  "scripts": {
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js"
+  },
+  "author": "Samuel Ribeiro",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
