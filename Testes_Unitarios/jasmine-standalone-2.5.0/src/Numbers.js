@@ -41,7 +41,7 @@ module.exports = class Numbers{
                 console.error(error)
             });
             media = resposta.average  
-            return media 
+            return media
             
      }
 }

@@ -93,7 +93,7 @@
         }
       }
     },
-    "/number/sum/:a/:b": {
+    "/number/sum/{a}/{b}": {
       "get": {
         "tags": [
           "Calcula a soma de dois inteiros."
@@ -102,16 +102,18 @@
         "description": "Realiza a soma de dois inteiros.",
         "parameters": [
           {
-            "name": "A",
-            "in": "query",
-            "description": "Um numero inteiro.",
-            "type": "integer"
+            "in": "path",
+            "name": "a",
+            "type": "integer",
+            "required": true,
+            "description": "Um número inteiro."
           },
           {
-            "name": "B",
-            "in": "query",
-            "description": "Um numero inteiro.",
-            "type": "integer"
+            "in": "path",
+            "name": "b",
+            "type": "integer",
+            "required": true,
+            "description": "Um número inteiro."
           }
         ],
         "responses": {
@@ -121,7 +123,7 @@
         }
       }
     },
-    "/number/divide/:A/:B": {
+    "/number/divide/{a}/{b}": {
       "get": {
         "tags": [
           "Calcula a divisão de dois inteiros."
@@ -130,16 +132,18 @@
         "description": "Realiza a divisão de dois inteiros.",
         "parameters": [
           {
-            "name": "A",
-            "in": "query",
-            "description": "Um numero inteiro.",
-            "type": "integer"
+            "in": "path",
+            "name": "a",
+            "type": "integer",
+            "required": true,
+            "description": "Um número inteiro."
           },
           {
-            "name": "B",
-            "in": "query",
-            "description": "Um numero inteiro.",
-            "type": "integer"
+            "in": "path",
+            "name": "b",
+            "type": "integer",
+            "required": true,
+            "description": "Um número inteiro."
           }
         ],
         "responses": {

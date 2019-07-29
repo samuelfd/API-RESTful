@@ -59,39 +59,43 @@ paths:
           schema:
             type: integer
             example : 2       
-  /number/sum/:a/:b:
+  /number/sum/{a}/{b}:
     get:
       tags:
       - Calcula a soma de dois inteiros.
       summary: SumInteger
       description: Realiza a soma de dois inteiros.
       parameters:
-       - name: A
-         in: query
-         description: Um numero inteiro.
-         type: integer
-       - name: B
-         in: query
-         description: Um numero inteiro.
-         type: integer
+        - in: path
+          name: a
+          type: integer
+          required: true
+          description: Um número inteiro.
+        - in: path
+          name: b
+          type: integer
+          required: true
+          description: Um número inteiro.
       responses:
         200:
           description: Um inteiro sendo a soma de A + B.
-  /number/divide/:A/:B:
+  /number/divide/{a}/{b}:
     get:
       tags:
       - Calcula a divisão de dois inteiros.
       summary: DivInteger
       description: Realiza a divisão de dois inteiros.
       parameters:
-       - name: A
-         in: query
-         description: Um numero inteiro.
-         type: integer
-       - name: B
-         in: query
-         description: Um numero inteiro.
-         type: integer
+        - in: path
+          name: a
+          type: integer
+          required: true
+          description: Um número inteiro.
+        - in: path
+          name: b
+          type: integer
+          required: true
+          description: Um número inteiro.
       responses:
         200:
           description: Um inteiro sendo a divisão de A / B.

@@ -12,14 +12,7 @@ app.use(bodyParser.urlencoded({extended : false}));
 var numbers = new Numbers()
 var number = new Number();
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
-
-app.post('/numbers/sum', async (req,res) => { 
-    console.log("Samuel")   
+app.get('/numbers/sum', async (req,res) => {    
     const array = req.body.array;     
     sum = await numbers.sum(array) 
     return res.status(200).json({success: true, sum: sum }) 
@@ -27,7 +20,7 @@ app.post('/numbers/sum', async (req,res) => {
    
 })
 
-app.post('/numbers/average', async (req,res) => {    
+app.get('/numbers/average', async (req,res) => {    
     var array = req.body.array 
     average = await numbers.average(array)  
     return res.status(200).json({success: true, average: average })
