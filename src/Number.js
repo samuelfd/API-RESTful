@@ -7,8 +7,6 @@ module.exports = class Numbers  {
     divide(a,b){        
         return Number(a)/Number(b)
     }
-
-
     
 }
 
