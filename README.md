@@ -17,4 +17,5 @@ API REST responsável por somar e calcular a média aritmética de um vetor de i
 >localhost:3000/numbers/sum
 ``` { 
 	"array" : [1,2,3] 
-   } ```	
+    } 
+```	
