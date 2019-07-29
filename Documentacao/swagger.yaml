@@ -7,21 +7,28 @@ info:
 
 schemes:
   - http
+  - https
 host: localhost:3000
 paths:
   /numbers/sum:
-    get:
+    post:
       tags:
       - Soma de um vetor de inteiros.
       summary: SumArray
       description: Soma um vetor de inteiros.
       parameters:
-       - name: Vetor
-         in: body
-         description: Um vetor de inteiros
-         required: true
-         type: array
-         example: {"array" :[1, 2, 5]}
+        - name: Vetor
+          in: body
+          required: true
+          schema:
+            # Body schema with atomic property examples
+            type: object
+            properties:
+              array:
+                type: array
+                items:
+                  type : integer
+                example : [1,2,3]
       responses:
         200:
           description: Um inteiro sendo a soma dos valores do vetor
@@ -29,18 +36,23 @@ paths:
             type: integer
             example : 6
   /numbers/average:
-    get:
+    post:
       tags:
       - Média aritmética de um vetor de inteiros.
       summary: AverageArray
       description: Calcula a média aritmética de um vetor de inteiros.
       parameters:
-       - name: Vetor
-         in: body
-         description: Um vetor de inteiros
-         required: true
-         type: array
-         example: {"array" :[1, 2, 5]}
+        - name: Vetor
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              array:
+                type: array
+                items:
+                  type : integer
+                example : [1,2,3]
       responses:
         200:
           description: Um inteiro sendo a média aritmética do vetor de inteiros.
@@ -82,7 +94,10 @@ paths:
          type: integer
       responses:
         200:
-          description: Um inteiro sendo a divisão de A / B.        
+          description: Um inteiro sendo a divisão de A / B.
+          schema:
+            type: integer
+                
         
           
                          
