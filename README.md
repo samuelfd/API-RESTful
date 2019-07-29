@@ -36,7 +36,7 @@ API REST responsável por somar e calcular a média aritmética de um vetor de i
 
 # Documentação
 
-1. A documentação da APIREST foi feita utilizando o framework Swagger, existe dois arquivos na pasta Documentacao, em ambos estão descrito a documentação da APIREST, para visualizar a documentação você deve acessar o [Swagger] (https://editor.swagger.io) e importar qualquer um dos dois arquivos a parti no menu "File".
+1. A documentação da APIREST foi feita utilizando o framework Swagger, existe dois arquivos na pasta Documentacao, em ambos estão descrito a documentação da APIREST, para visualizar a documentação você deve acessar o [Swagger](https://editor.swagger.io) e importar qualquer um dos dois arquivos a parti no menu "File".
 
 # Teste Unitário
 
